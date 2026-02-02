@@ -12,11 +12,11 @@
 [![Env Variables](https://img.shields.io/badge/Environment--Variables-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black)](https://nextjs.org/docs/basic-features/environment-variables)
 ![CORS](https://img.shields.io/badge/CORS-000000?style=for-the-badge&logo=mozilla&logoColor=white)
 
-## 📝 Descrição
+## 📝 Description
 
-Este projeto é um sistema completo de reservas para a Pousada Encanto da Serra, integrando um frontend moderno e responsivo com um backend robusto para processamento e armazenamento de dados. Os clientes podem fazer reservas através de um formulário intuitivo, e todas as informações são armazenadas em um banco de dados PostgreSQL.
+This project is a complete reservation system for Pousada Encanto da Serra, integrating a modern and responsive frontend with a robust backend for data processing and storage. Customers can make reservations through an intuitive form, and all information is stored in a PostgreSQL database.
 
-O frontend foi desenvolvido com Next.js, React, TypeScript, Tailwind CSS e Flowbite, oferecendo uma interface atraente e responsiva. O backend utiliza Express, Sequelize e PostgreSQL para criar uma API RESTful que processa e armazena as reservas de forma segura e eficiente.
+The frontend was developed with Next.js, React, TypeScript, Tailwind CSS, and Flowbite, offering an attractive and responsive interface. The backend uses Express, Sequelize, and PostgreSQL to create a RESTful API that processes and stores reservations securely and efficiently.
 
 ## ✨ Screenshots
 
@@ -31,41 +31,41 @@ O frontend foi desenvolvido com Next.js, React, TypeScript, Tailwind CSS e Flowb
   <img src="https://github.com/venturelli-91/hotel_reservation/raw/main/Prints-ReadME/hotel6_project.png" alt="Screenshot 6" width="32%" />
 </p>
 
-## 🔍 Funcionalidades
+## 🔍 Features
 
 ### Frontend
 
-- **Formulário de Reserva**: Interface intuitiva para os clientes preencherem suas informações
-- **Validação de Dados**: Verificação em tempo real dos dados inseridos pelo usuário
-- **Design Responsivo**: Experiência consistente em dispositivos móveis, tablets e desktops
-- **Feedback Visual**: Mensagens de confirmação e erro para manter o usuário informado
+- **Reservation Form**: Intuitive interface for customers to fill in their information
+- **Data Validation**: Real-time verification of user-entered data
+- **Responsive Design**: Consistent experience across mobile devices, tablets, and desktops
+- **Visual Feedback**: Confirmation and error messages to keep the user informed
 
 ### Backend
 
-- **API RESTful**: Endpoints para criar, ler, atualizar e deletar reservas
-- **Persistência de Dados**: Armazenamento seguro das informações no PostgreSQL
-- **Validação de Dados**: Verificação das informações antes de salvar no banco
-- **Configuração Flexível**: Facilmente adaptável a diferentes ambientes através de variáveis de ambiente
+- **RESTful API**: Endpoints to create, read, update, and delete reservations
+- **Data Persistence**: Secure storage of information in PostgreSQL
+- **Data Validation**: Information verification before saving to the database
+- **Flexible Configuration**: Easily adaptable to different environments through environment variables
 
-## 🛠️ Arquitetura
+## 🛠️ Architecture
 
-O sistema segue uma arquitetura cliente-servidor moderna:
+The system follows a modern client-server architecture:
 
 ```
 Reservation_Hotel/
-├── frontend/                # Aplicação Next.js/React
-│   ├── public/              # Arquivos estáticos
-│   ├── src/                 # Código-fonte do frontend
-│   │   ├── components/      # Componentes React
-│   │   ├── services/        # Serviços de comunicação com a API
-│   │   ├── store/           # Gerenciamento de estado com Zustand
+├── frontend/                # Next.js/React Application
+│   ├── public/              # Static files
+│   ├── src/                 # Frontend source code
+│   │   ├── components/      # React components
+│   │   ├── services/        # API communication services
+│   │   ├── store/           # State management with Zustand
 │   │   └── ...
-├── backend/                 # Servidor Express
-│   ├── models/              # Modelos Sequelize
+├── backend/                 # Express server
+│   ├── models/              # Sequelize models
 │   └── ...
 ```
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Technologies Used
 
 ### Frontend
 
@@ -90,67 +90,67 @@ Reservation_Hotel/
   <img src="https://i.imgur.com/6WSYgYm.png" width="48" height="48" alt="CORS" />
 </p>
 
-## 🏃‍♂️ Como Executar o Projeto
+## 🏃‍♂️ How to Run the Project
 
-### Pré-requisitos
+### Prerequisites
 
 - Node.js (v14+)
 - PostgreSQL
-- npm ou yarn
+- npm or yarn
 
-### Configuração do Banco de Dados
+### Database Configuration
 
-1. Instale o PostgreSQL
-2. Crie um banco de dados chamado `reservations`
-3. Configure as credenciais no arquivo `.env` do backend
+1. Install PostgreSQL
+2. Create a database called `reservations`
+3. Configure the credentials in the `.env` file of the backend
 
 ### Backend
 
 ```bash
-# Navegue até o diretório do backend
+# Navigate to the backend directory
 cd backend
 
-# Instale as dependências
+# Install dependencies
 npm install
 
-# Configure as variáveis de ambiente
-# Crie um arquivo .env com as variáveis necessárias:
-# - Conexão com o banco de dados
-# - Outras configurações sensíveis
-# NUNCA compartilhe ou exponha este arquivo publicamente
+# Configure environment variables
+# Create an .env file with the necessary variables:
+# - Database connection
+# - Other sensitive configurations
+# NEVER share or expose this file publicly
 
-# Teste a conexão com o banco de dados
+# Test the database connection
 npm run setup
 
-# Inicie o servidor
+# Start the server
 npm run dev
 ```
 
 ### Frontend
 
 ```bash
-# Navegue até o diretório do frontend
+# Navigate to the frontend directory
 cd frontend
 
-# Instale as dependências
+# Install dependencies
 npm install
 
-# Inicie o servidor de desenvolvimento
+# Start the development server
 npm run dev
 ```
 
-Acesse o aplicativo em http://localhost:3000.
+Access the application at http://localhost:3000.
 
 ## 📊 API Endpoints
 
-- **POST /api/reservations**: Criar uma nova reserva
-- **GET /api/reservations**: Listar todas as reservas
-- **GET /api/reservations/:id**: Obter detalhes de uma reserva específica
+- **POST /api/reservations**: Create a new reservation
+- **GET /api/reservations**: List all reservations
+- **GET /api/reservations/:id**: Get details of a specific reservation
 
-## 🔧 Modelo de Dados
+## 🔧 Data Model
 
 ```typescript
-// Modelo de Reserva
+// Reservation Model
 interface Reservation {
 	id: number;
 	nomeCompleto: string;
@@ -164,24 +164,24 @@ interface Reservation {
 }
 ```
 
-## 🌟 Funcionalidades Futuras
+## 🌟 Future Features
 
-- **Painel Administrativo**: Interface para gerenciar reservas
-- **Autenticação**: Sistema de login para administradores
-- **Notificações por Email**: Envio automático de confirmações
-- **Calendário Visual**: Visualização das datas disponíveis
-- **Sistema de Pagamento**: Integração com gateways de pagamento
+- **Admin Panel**: Interface to manage reservations
+- **Authentication**: Login system for administrators
+- **Email Notifications**: Automatic confirmation sending
+- **Visual Calendar**: Viewing available dates
+- **Payment System**: Integration with payment gateways
 
-## 👨‍💻 Contribuindo
+## 👨‍💻 Contributing
 
-Faça um fork deste repositório e sinta-se à vontade para contribuir com esse projeto incrível =D.
+Fork this repository and feel free to contribute to this amazing project =D.
 
-## 📬 Contato
+## 📬 Contact
 
-- **Desenvolvedor**: Aurélio Venturelli
-- **LinkedIn**: [Perfil LinkedIn](https://www.linkedin.com/in/aurelioventurelli/)
-- **GitHub**: [Perfil GitHub](https://github.com/venturelli-91)
+- **Developer**: Aurélio Venturelli
+- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/aurelioventurelli/)
+- **GitHub**: [GitHub Profile](https://github.com/venturelli-91)
 
-## 📜 Licença
+## 📜 License
 
-Este projeto é licenciado sob a MIT License. Consulte o arquivo LICENSE para mais informações.
+This project is licensed under the MIT License. See the LICENSE file for more information.
